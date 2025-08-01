@@ -1,4 +1,5 @@
 from selenium.common.exceptions import NoSuchElementException
+
 class BasePage():
     def __init__(self, browser, url, timeout=10): # Здесь timeout=10 — это значение по умолчанию, т.е если ты не укажешь timeout при создании объекта, он автоматически будет равен 10
         self.browser = browser
