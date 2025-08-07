@@ -6,7 +6,7 @@ class ProductPage(BasePage):
     def should_not_be_success_message(self): #проверка что на странице нет плашки с сообщением об успешном добавлении товара в корзину
         assert self.is_not_element_present(*ProductPageLocators.MESSAGE_TEXT_ABOUT_ADDING_TO_CART), \
             "Success message is presented, but should not be"
-    def add_product_to_basket(self): #этот метод сохраняет имя и стоимость книги, затем находит кнопку "добавить в корзину" и нажимает ее
+    def add_product_to_basket(self): #этот метод находит кнопку "добавить в корзину" и нажимает ее
         button_add = self.browser.find_element(*ProductPageLocators.BTN_ADD_TO_BASKET)
         button_add.click()
 
