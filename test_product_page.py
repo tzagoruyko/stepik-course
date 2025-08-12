@@ -71,8 +71,8 @@ def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
     basket_page.no_items_in_the_cart()
     basket_page.should_be_message_about_basket_empty()
 
-class TestUserAddToBasketFromProductPage:
-    @pytest.fixture(scope="function", autouse=True)
+class TestUserAddToBasketFromProductPage: #тестовые сценарии для зарегистрированных пользователей
+    @pytest.fixture(scope="function", autouse=True) #эта функция регистрирует юзера перед каждым тестом в классе
     def setup(self, browser):
         link = "http://selenium1py.pythonanywhere.com/ru/accounts/login/"
         page = LoginPage(browser, link)
